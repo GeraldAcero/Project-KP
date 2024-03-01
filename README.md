@@ -1,3 +1,5 @@
+# Project KP - Network Device Control Script
+
 Project KP is a Python script designed to provide a command-line interface for managing parental control and firewall settings on a local network device. It utilizes Selenium automation with the Microsoft Edge browser to interact with the web interface of the network device.
 
 ## Features
