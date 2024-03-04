@@ -121,7 +121,23 @@ def display_menu():
     print("3. Exit")
     print("")
 
-# config = load_config()
-# DeactivateKP(config['username'], config['password'], config['edge_path'])
-    
-display_menu()
+def main():
+    config = load_config()
+
+    while True:
+        display_menu()
+        choice = input("Enter your choice: ")
+
+        if choice == '1':
+            ActivateKP(config['username'], config['password'], config['edge_path'])
+        elif choice == '2':
+            DeactivateKP(config['username'], config['password'], config['edge_path'])
+            pass
+        elif choice == '3':
+            print("Exiting the program.")
+            break
+        else:
+            print("Invalid choice. Please enter a valid option (1, 2, or 3).")
+
+if __name__ == "__main__":
+    main()
