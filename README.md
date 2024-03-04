@@ -17,6 +17,41 @@ Before using Project KP with your PLDT modem, ensure you have the following prer
 - Microsoft Edge browser
 - Selenium Python library (`pip install selenium`)
 
+## Installation
+
+1. **Clone the repository:**
+
+    ```bash
+    git clone https://github.com/your_username/project-kp.git
+    ```
+
+2. **Navigate to the project directory:**
+
+    ```bash
+    cd project-kp
+    ```
+
+3. **Install dependencies:**
+
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+4. **Download Microsoft Edge WebDriver:**
+
+    Download the appropriate version of the Microsoft Edge WebDriver from [here](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/) and place it in the project directory.
+
+## Usage
+
+1. **Run the script:**
+
+    ```bash
+    main.py
+    ```
+
+2. **Follow on-screen instructions:**
+
+    Choose an option from the displayed menu by entering the corresponding number. Options include activating parental controls, deactivating parental controls, and exiting the program.
 
 ## Disclaimer
 
