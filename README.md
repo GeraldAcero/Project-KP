@@ -36,8 +36,25 @@ Before using Project KP with your PLDT modem, ensure you have the following prer
     ```bash
     pip install -r requirements.txt
     ```
+4. **Update the configuration:**
 
-4. **Download Microsoft Edge WebDriver:**
+    Open the `config.json` file in the project directory.
+
+    Update the values of `"username"`, `"password"`, and `"edge_path"` with your PLDT modem username, password, and the path to the Microsoft Edge WebDriver, respectively.
+
+    Example `config.json`:
+
+    ```json
+    {
+        "username": "YOUR_USERNAME",
+        "password": "YOUR_PASSWORD",
+        "edge_path": "//YOUR//EDGE//DRIVER//PATH//"
+    }
+    ```
+
+    Replace `"YOUR_USERNAME"`, `"YOUR_PASSWORD"`, and `"//YOUR//EDGE//DRIVER//PATH//"` with your PLDT modem username, password, and the path to the Microsoft Edge WebDriver, respectively.
+
+5. **Download Microsoft Edge WebDriver:**
 
     Download the appropriate version of the Microsoft Edge WebDriver from [here](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/) and place it in the project directory.
 
