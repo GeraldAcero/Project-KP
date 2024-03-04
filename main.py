@@ -1,12 +1,13 @@
 from selenium import webdriver
 import time
+import json
 
-edge_driver_path = "EDGE PATH"
 
-username = "USER"
-password = "PASS"
-
-def ActivateKP():
+def load_config():
+    with open('config.json') as f:
+        return json.load(f)
+    
+def ActivateKP(username, password, edge_path):
     
     edge_options = webdriver.EdgeOptions()
     edge_options.add_argument("ignore-certificate-errors")
@@ -15,7 +16,7 @@ def ActivateKP():
         'acceptInsecureCerts': True
     }
 
-    driver = webdriver.Edge(executable_path=edge_driver_path, options=edge_options, capabilities=capabilities)
+    driver = webdriver.Edge(executable_path=edge_path, options=edge_options, capabilities=capabilities)
 
     driver.get("https://192.168.1.1/html/login_pldt.html")
 
@@ -53,3 +54,7 @@ def ActivateKP():
 
 def DeactivateKP():
     pass
+
+
+config = load_config()
+ActivateKP(config['username'], config['password'], config['edge_path'])
