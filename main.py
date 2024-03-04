@@ -35,8 +35,21 @@ def ActivateKP():
 
     radio_button = driver.find_element_by_id("firewall_medium")
     radio_button.click()
+    time.sleep(1)
+
+    apply_button = driver.find_element_by_xpath("//input[@type='button' and @value='Apply']")
+    apply_button.click()
 
     time.sleep(1)
+    driver.get("https://192.168.1.1/html/parental_control_inter.html")
+
+
+    radio_button = driver.find_element_by_xpath("//input[@type='radio' and @name='parent_control_enable' and @value='1']")
+    radio_button.click()
+    time.sleep(1)
+    apply_button = driver.find_element_by_xpath("//input[@type='button' and @value='Apply']")
+    apply_button.click()
+    driver.quit()
 
 def DeactivateKP():
     pass
