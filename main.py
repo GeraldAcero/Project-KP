@@ -97,6 +97,26 @@ def DeactivateKP(username, password, edge_path):
     apply_button.click()
     driver.quit()
 
+def display_menu():
 
-config = load_config()
-DeactivateKP(config['username'], config['password'], config['edge_path'])
+    print("""
+-------------------------------------------------------------------------------- 
+
+  _____   _____    ____        _  ______  _____  _______            _  __ _____  
+ |  __ \ |  __ \  / __ \      | ||  ____|/ ____||__   __|          | |/ /|  __ \ 
+ | |__) || |__) || |  | |     | || |__  | |        | |     ______  | ' / | |__) |
+ |  ___/ |  _  / | |  | | _   | ||  __| | |        | |    |______| |  <  |  ___/ 
+ | |     | | \ \ | |__| || |__| || |____| |____    | |             | . \ | |     
+ |_|     |_|  \_\ \____/  \____/ |______|\_____|   |_|             |_|\_\|_|     
+                                                                                 
+--------------------------------------------------------------------------------              
+""")
+    print("1. Activate")
+    print("2. Deactivate")
+    print("3. Exit")
+    print("")
+
+# config = load_config()
+# DeactivateKP(config['username'], config['password'], config['edge_path'])
+    
+display_menu()
