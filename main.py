@@ -22,11 +22,21 @@ def ActivateKP():
     username_input = driver.find_element_by_id("user_name")
     username_input.send_keys(username)
 
+
     password_input = driver.find_element_by_id("loginpp")
     password_input.send_keys(password)
+    time.sleep(1)
 
     login_button = driver.find_element_by_id("login_btn")
     login_button.click()
+    time.sleep(5)
+
+    driver.get("https://192.168.1.1/html/firewall_enable_inter.html")
+
+    radio_button = driver.find_element_by_id("firewall_medium")
+    radio_button.click()
+
+    time.sleep(1)
 
 def DeactivateKP():
     pass
