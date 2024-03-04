@@ -22,7 +22,7 @@ Before using Project KP with your PLDT modem, ensure you have the following prer
 1. **Clone the repository:**
 
     ```bash
-    git clone https://github.com/your_username/project-kp.git
+    git clone https://github.com/GeraldAcero/project-kp.git
     ```
 
 2. **Navigate to the project directory:**
