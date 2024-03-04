@@ -1,6 +1,7 @@
 from selenium import webdriver
 import time
 import json
+import os
 
 
 def load_config():
@@ -97,8 +98,12 @@ def DeactivateKP(username, password, edge_path):
     apply_button.click()
     driver.quit()
 
-def display_menu():
+def clear_terminal():
+    # Clear the terminal screen
+    os.system('cls' if os.name == 'nt' else 'clear')
 
+def display_menu():
+    clear_terminal()
     print("""
 -------------------------------------------------------------------------------- 
 
